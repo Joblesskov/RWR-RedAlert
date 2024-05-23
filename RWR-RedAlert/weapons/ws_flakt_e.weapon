@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="ws_flakt.weapon" key="ws_flakt_e.weapon">
+    <specification 
+        retrigger_time="0.6" 
+        accuracy_factor="0.92" 
+        sustained_fire_grow_step="0.2" 
+        sustained_fire_diminish_rate="0.5" 
+        magazine_size="12" 
+        name="Flak Gun (Elite)" 
+        class="0" />
+    <ballistics curve_height="5.0" near_far_distance="5.0" speed_estimation_near="120.0" speed_estimation_far="100.0" max_speed="80.0" randomness="0.0" tweak_factor="1.23" />
+    <commonness value="3" can_respawn_with="0" in_stock="1"/>    
+    <inventory price="200.0" />
+    <capacity value="0" source="rank" source_value="0.0"/>
+    <capacity value="1" source="rank" source_value="0.4"/>
+    <hud_icon filename="hud_flakt_e.png" />
+    <modifier class="speed" value="-0.1" />
+</weapon>
+
