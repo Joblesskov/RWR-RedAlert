@@ -23,9 +23,10 @@ class MindControl : Tracker {
 
 		// immune to mind control
 		array<string> immuneKeys = {
-			"ws_mind_control.weapon",
-			"ws_mind_control_e.weapon",
+			"wy_mind_control.weapon",
+			"wy_mind_control_e.weapon",
 			"ws_akm.weapon",
+			"wa_colt_m1911.weapon",
 			"dog.weapon"
 		};
 
@@ -81,7 +82,7 @@ class MindControl : Tracker {
 				"	character_id='" + controllerId + "' " +
 				"	reward='0.001' " +
 				"/>";
-			
+
 			m_metagame.getComms().send(command1);
 			m_metagame.getComms().send(command2);
 			m_metagame.getComms().send(command3);

@@ -19,5 +19,12 @@ Projectile
     <projectile file="flak.projectile" />
     <projectile file="javelin.projectile" />
     <projectile file="neutron.projectile" />
+    <projectile file="psychic_jab_bullet.projectile" />
     <projectile file="tesla.projectile" />
+    <projectile file="tracer_dart.projectile" />
+    <projectile file="tracer_dart_blast.projectile" />
+    <projectile file="tracer_missile.projectile" />
+    <projectile file="virus_dart.projectile" />
+    <projectile file="virus_smoke.projectile" />
+    <projectile file="virus_smoke_sub.projectile" />
 </projectiles>

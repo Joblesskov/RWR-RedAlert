@@ -20,9 +20,6 @@
 	<model filename="soldier_a_chrono.xml">
 		<requirement class="weapon" slot="0" key="wa_chrono_e.weapon"/>
 	</model>
-	<model filename="soldier_a_engineer.xml">
-		<requirement class="weapon" slot="0" key="wa_mini_uzi.weapon"/>
-	</model>
 	<model filename="soldier_a_ggi.xml">
 		<requirement class="weapon" slot="0" key="wa_stoner_lmg.weapon"/>
 	</model>
@@ -50,6 +47,9 @@
 	<model filename="soldier_camouflage_suit.xml">
 		<requirement class="weapon" slot="0" key="wa_mp5sd.weapon"/>
 	</model>
+	<model filename="soldier_a_tanya.xml">
+		<requirement class="weapon" slot="0" key="wa_colt_m1911.weapon"/>
+	</model>
 	
 	<model filename="soldier_a_conscript.xml">
         <requirement class="weapon" slot="0" key="ws_ppsh41.weapon"/>
@@ -63,9 +63,6 @@
 	<model filename="soldier_a_desolator.xml">
 		<requirement class="weapon" slot="0" key="ws_desolator_e.weapon"/>
 	</model>
-	<model filename="soldier_a_engineer.xml">
-		<requirement class="weapon" slot="0" key="ws_aek_919k.weapon"/>
-	</model>
 	<model filename="soldier_a_flakt.xml">
 		<requirement class="weapon" slot="0" key="ws_flakt.weapon"/>
 	</model>
@@ -78,16 +75,13 @@
 	<model filename="soldier_a_ivan.xml">
 		<requirement class="weapon" slot="0" key="ws_knife_e.weapon"/>
 	</model>
-	<model filename="soldier_a_psicorp.xml">
-		<requirement class="weapon" slot="0" key="ws_mind_control.weapon"/>
-	</model>
-	<model filename="soldier_a_psicorp.xml">
-		<requirement class="weapon" slot="0" key="ws_mind_control_e.weapon"/>
-	</model>
 	<model filename="soldier_a_teslat.xml">
 		<requirement class="weapon" slot="0" key="ws_teslat.weapon"/>
 	</model>
 	<model filename="soldier_a_teslat.xml">
 		<requirement class="weapon" slot="0" key="ws_teslat_e.weapon"/>
+	</model>
+	<model filename="soldier_a_boris.xml">
+		<requirement class="weapon" slot="0" key="ws_akm.weapon"/>
 	</model>
 </models>

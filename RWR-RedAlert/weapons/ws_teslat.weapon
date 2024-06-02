@@ -11,7 +11,7 @@
   magazine_size="10" 
   can_shoot_standing="1" 
   suppressed="0" 
-  name="Portable Tesla Weapon" 
+  name="mini-Tesla Coil" 
   class="4" 
   carry_in_two_hands="0"
   sight_range_modifier="1.0"  
@@ -60,6 +60,7 @@
     <effect class="muzzle" ref="UpDust" />
 
     <modifier class="speed" value="-0.12" />    
+    <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.85" />
 

@@ -2,7 +2,7 @@
 <projectile 
 file="grenade_base.projectile" 
 class="grenade" 
-name="Dynamite" 
+name="dynamite" 
 key="dynamite.projectile" 
 slot="0" 
 can_be_disarmed="1" 

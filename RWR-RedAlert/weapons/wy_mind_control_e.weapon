@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="ws_mind_control.weapon" key="ws_mind_control_e.weapon">
+<weapon file="wy_mind_control.weapon" key="wy_mind_control_e.weapon">
     <specification 
         retrigger_time="3"
         name="Mind Control (Elite)" 

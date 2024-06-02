@@ -13,9 +13,11 @@ Common
     <weapon key="minig_resource.weapon" />
     <weapon key="mortar_resource.weapon" />
     <weapon key="tow_resource.weapon" />
-    <weapon key="pb.weapon" />
 	<weapon key="bandage.weapon" />
 	<weapon key="vest_repair.weapon" />
+	<weapon key="wrench.weapon"  />
+	<weapon key="wrench_small.weapon" />
+	<weapon key="tracer_dart.weapon" />
 	<carry_item file="god_vest.carry_item" />
 	<carry_item file="vest1.carry_item" />      
 	<carry_item file="vest2.carry_item" /> 
@@ -25,14 +27,16 @@ Common
 	<carry_item file="camo_vest.carry_item" />
 	<carry_item file="vest_blackops.carry_item" />	
 	<carry_item file="eodvest.carry_item" /> 
-	<carry_item file="eodvest_ai.carry_item" /> 
 	<carry_item file="dog.carry_item" />
+    <carry_item file="vest_plate.carry_item" />
+    <carry_item file="vest_thick_skin.carry_item" />
 
 Allies
     <weapon key="wa_awp.weapon" />
     <weapon key="wa_awp_e.weapon" />
     <weapon key="wa_chrono.weapon" />
     <weapon key="wa_chrono_e.weapon" />
+    <weapon key="wa_colt_m1911.weapon" />
     <weapon key="wa_javelin.weapon" />
     <weapon key="wa_m60.weapon" />
     <weapon key="wa_m60_e.weapon" />
@@ -57,23 +61,27 @@ Soviet Union
     <weapon key="ws_flakt_e.weapon" />
     <weapon key="ws_knife.weapon" />
     <weapon key="ws_knife_e.weapon" />
-    <weapon key="ws_mind_control.weapon" />
-    <weapon key="ws_mind_control_e.weapon" />
     <weapon key="ws_ppsh41.weapon" />
     <weapon key="ws_ppsh41_e.weapon" />
     <weapon key="ws_rpg-7.weapon" />
     <weapon key="ws_teslat.weapon" />
     <weapon key="ws_teslat_e.weapon" />
 
+Epsilon Army
+    <weapon key="wy_fist.weapon" />
+    <weapon key="wy_fist_e.weapon" />
+    <weapon key="wy_mind_control.weapon" />
+    <weapon key="wy_mind_control_e.weapon" />
+    <weapon key="wy_psychic_jab.weapon" />
+    <weapon key="wy_psychic_jab_e.weapon" />
+    <weapon key="wy_steyr_tmp.weapon" />
+    <weapon key="wy_virus.weapon" />
+    <weapon key="wy_virus_e.weapon" />
+
 TODO
 	<weapon key="tank_trap_resource.weapon" />
-	<weapon key="claymore_resource.weapon" />
-	<weapon key="wrench.weapon"  />
-	<weapon key="wrench_small.weapon" enabled="1" />
 	<weapon key="tracer_dart.weapon" />
 	<weapon key="flamethrower.weapon" />
-    <projectile key="acid_bomb.projectile"  />
-    <projectile key="selfstun.projectile"  enabled="0"/>
 	<vehicle key="sandbag_cover.vehicle" />
 	<vehicle key="dogcrate_para.vehicle" />
 	<vehicle key="tank_trap.vehicle" />

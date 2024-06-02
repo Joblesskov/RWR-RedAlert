@@ -37,9 +37,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 	const array<FactionConfig@>@ getAvailableFactionConfigs() const {
 		array<FactionConfig@> availableFactionConfigs;
 
-		availableFactionConfigs.push_back(FactionConfig(-1, "green.xml", "Greenbelts", "0.1 0.5 0", "green_boss.xml"));
-		availableFactionConfigs.push_back(FactionConfig(-1, "grey.xml", "Graycollars", "0.5 0.5 0.5", "grey_boss.xml"));
-		availableFactionConfigs.push_back(FactionConfig(-1, "brown.xml", "Brownpants", "0.5 0.25 0", "brown_boss.xml"));
+		availableFactionConfigs.push_back(FactionConfig(-1, "green.xml", "Allies", "0.1 0.5 0", "green.xml"));
+		availableFactionConfigs.push_back(FactionConfig(-1, "brown.xml", "Soviet Union", "0.5 0.25 0", "brown.xml"));
+		availableFactionConfigs.push_back(FactionConfig(-1, "grey.xml", "Epsilon", "0.5 0.5 0.5", "grey.xml"));
 
 		return availableFactionConfigs;
 	}
@@ -72,7 +72,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 			_log("setting " + faction.m_name + " as index " + index, 1);
 
 			faction.m_index = index;
-			m_mapRotator.addFactionConfig(faction);
 			m_mapRotator.addFactionConfig(faction);
 
 			availableFactionConfigs.erase(availableIndex);

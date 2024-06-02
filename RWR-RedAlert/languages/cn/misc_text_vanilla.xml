@@ -1,37 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <translation>
 red alert
-	<text key="Neutron Microgun" text="中子加特林" />
-	<text key="Neutron Microgun (Elite)" text="中子加特林 (精英)" />
+	<text key="AEK-919k" text="AEK-919k冲锋枪" />
+	<text key="AKM" text="AKM突击步枪" />
 	<text key="AWP" text="AWP狙击步枪" />
 	<text key="AWP (Elite)" text="AWP狙击步枪 (精英)" />
-	<text key="M60" text="M60E4通用机枪" />
-	<text key="M60 (Elite)" text="M60E4通用机枪 (精英)" />
-	<text key="mini UZI" text="Mini UZI轻型冲锋枪" />
-	<text key="AEK-919k" text="AEK-919k冲锋枪" />
-	<text key="MP5SD" text="MP5微声冲锋枪" />
-	<text key="P90" text="P90冲锋枪" />
-	<text key="P90 (Elite)" text="P90冲锋枪 (精英)" />
-	<text key="Rocketeer" text="双子机炮" />
-	<text key="Rocketeer (Elite)" text="双子机炮 (精英)" />
-	<text key="Stoner LMG" text="斯通纳轻机枪" />
-	<text key="Stoner LMG (Elite)" text="斯通纳轻机枪 (精英)" />
-    <text key="UMP40" text="UMP-40冲锋枪" /> 
-    <text key="UMP40 (Elite)" text="UMP-40冲锋枪 (精英)" /> 
-	<text key="Rad Cannon" text="福射炮" />
-	<text key="Rad Cannon (Elite)" text="福射炮 (精英)" />
+	<text key="Colt M1911" text="柯尔特M1911" />
+	<text key="Fist" text="拳头" />
+	<text key="Fist (Elite)" text="拳头 (精英)" />
 	<text key="Flak Gun" text="便携高射炮" />
 	<text key="Flak Gun (Elite)" text="便携高射炮 (精英)" />
 	<text key="Knife" text="匕首" />
 	<text key="Knife (Elite)" text="匕首 (精英)" />
+	<text key="Neutron Microgun" text="中子加特林" />
+	<text key="Neutron Microgun (Elite)" text="中子加特林 (精英)" />
+	<text key="M60" text="M60E4通用机枪" />
+	<text key="M60 (Elite)" text="M60E4通用机枪 (精英)" />
 	<text key="Mind Control" text="心灵控制" />
 	<text key="Mind Control (Elite)" text="心灵控制 (精英)" />
+	<text key="MP5SD" text="MP5微声冲锋枪" />
+	<text key="mini UZI" text="Mini UZI轻型冲锋枪" />
+	<text key="P90" text="P90冲锋枪" />
+	<text key="P90 (Elite)" text="P90冲锋枪 (精英)" />
+	<text key="mini-Tesla Coil" text="小型磁暴线圈" />
+	<text key="mini-Tesla Coil (Elite)" text="小型磁暴线圈 (精英)" />
 	<text key="PPSh-41" text="波波沙冲锋枪" />
 	<text key="PPSh-41 (Elite)" text="波波沙冲锋枪 (精英)" />
-	<text key="Portable Tesla Weapon" text="小型磁暴炮" />
-	<text key="Portable Tesla Weapon (Elite)" text="小型磁暴炮 (精英)" />
-	<text key="Dynamite" text="高爆炸药" />
+	<text key="Psychic Jab" text="心灵之火" />
+	<text key="Psychic Jab (Elite)" text="心灵之火 (精英)" />
+	<text key="Rad Cannon" text="放射炮" />
+	<text key="Rad Cannon (Elite)" text="放射炮 (精英)" />
+	<text key="Rocketeer" text="双子机炮" />
+	<text key="Rocketeer (Elite)" text="双子机炮 (精英)" />
+	<text key="Steyr TMP" text="斯太尔TMP战术冲锋枪"/>
+	<text key="Stoner LMG" text="斯通纳轻机枪" />
+	<text key="Stoner LMG (Elite)" text="斯通纳轻机枪 (精英)" />
+    <text key="UMP40" text="UMP-40冲锋枪" /> 
+    <text key="UMP40 (Elite)" text="UMP-40冲锋枪 (精英)" /> 
+    <text key="Virus Dart Gun" text="病毒狙击枪" /> 
+    <text key="Virus Dart Gun (Elite)" text="病毒狙击枪 (精英)" /> 
 
+	<text key="Dynamite deploy" text="高爆炸药 (部署)" />
+	<text key="dynamite" text="高爆炸药" />
+	<text key="psychic blast" text="心灵冲击" />
+	<text key="rad eruption" text="放射场爆发" />
+
+	<text key="black ops vest" text="夜行特战服"/> 
+	<text key="black ops vest, damaged" text="夜行特战服，受损"/> 
+	<text key="black ops vest, destroyed" text="夜行特战服，损坏"/> 
+	<text key="EOD armor, 80&#37;" text="防爆服，80&#37;" />
+	<text key="EOD armor, 60&#37;" text="防爆服，60&#37;" />
+	<text key="EOD armor, 40&#37;" text="防爆服，40&#37;" />
+	<text key="EOD armor, 20&#37;" text="防爆服，20&#37;" />
+	<text key="EOD armor, destroyed" text="防爆服，已损坏" />
+	<text key="Plate" text="金属护甲" />
+	<text key="Thick Skin" text="基因改造" />
 
 vanilla
 	<text key="Private" text="列兵" />
@@ -401,8 +424,6 @@ vanilla
 	<text key="titan box" text="泰坦箱子"/>
 	<text key="Laptop" text="笔记本电脑"/>
         
-	<text key="black ops vest" text="夜行特战服"/> 
-	<text key="black ops vest, damaged" text="夜行特战服，已损坏"/> 
 
 	<text key="spawn supplies" text="请求补给车"/>
 	<text key="I need supplies!" text="我需要补给车！"/>
@@ -422,11 +443,6 @@ vanilla
 	<text key="costume, werewolf" text="狼人服" />
 	<text key="costume, santa" text="圣诞服" />
 	<text key="SMAW" text="SMAW火箭筒" />
-	<text key="EOD armor, 80&#37;" text="防爆服，80&#37;" />
-	<text key="EOD armor, 60&#37;" text="防爆服，60&#37;" />
-	<text key="EOD armor, 40&#37;" text="防爆服，40&#37;" />
-	<text key="EOD armor, 20&#37;" text="防爆服，20&#37;" />
-	<text key="EOD armor, destroyed" text="防爆服，已损坏" />
 	<text key="Radar Tank HMG" text="雷达坦克机枪" />
 	<text key="Vulcan HMG" text="火神炮" />
 	<text key=".50 cal" text=".50重机枪" />

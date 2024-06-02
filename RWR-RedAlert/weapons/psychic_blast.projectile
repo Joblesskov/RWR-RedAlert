@@ -8,7 +8,7 @@
         offset="0 0 0" 
         position_spread="0 0" 
         direction_spread="0 0" />
-    <trigger class="time" time_to_live="0.1"/>
+    <trigger class="time" time_to_live="0.0"/>
     <rotation class="random" />
     
 

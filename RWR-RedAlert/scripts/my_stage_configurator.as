@@ -22,8 +22,7 @@ class MyStageConfigurator : StageConfiguratorCampaign {
 
 		availableFactionConfigs.push_back(FactionConfig(-1, "green.xml", "Allies", "0.1 0.5 0", "green.xml"));
 		availableFactionConfigs.push_back(FactionConfig(-1, "brown.xml", "Soviet Union", "0.5 0.25 0", "brown.xml"));
-		// availableFactionConfigs.push_back(FactionConfig(-1, "green.xml", "Allies", "0.1 0.5 0", "green.xml"));
-		// availableFactionConfigs.push_back(FactionConfig(-1, "grey.xml", "Epsilon", "0.5 0.5 0.5", "grey.xml"));
+		availableFactionConfigs.push_back(FactionConfig(-1, "grey.xml", "Epsilon", "0.5 0.5 0.5", "grey.xml"));
 
 		return availableFactionConfigs;
 	}

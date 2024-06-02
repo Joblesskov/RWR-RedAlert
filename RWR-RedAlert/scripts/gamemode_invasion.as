@@ -43,6 +43,7 @@
 #include "sbl.as"
 #include "emoticons.as"
 #include "mind_control.as"
+#include "virus_spreading.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -311,6 +312,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			addTracker(m_testingToolsTracker);
 		}
 		addTracker(MindControl(this));
+		addTracker(VirusSpreading(this));
 		addTracker(PrisonBreakObjective(this, 0));
 		setupDisableRadioAtMatchOver();
 		addTracker(AutoSaver(this));

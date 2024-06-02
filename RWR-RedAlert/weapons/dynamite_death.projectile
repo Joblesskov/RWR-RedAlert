@@ -13,7 +13,7 @@ time_to_live="45">
 
     <result class="blast" radius="4.0" damage="9.1" push="2.0" decal="1" character_state="death" />
     <collision class="sticky" />
-    <trigger class="time" time_to_live="0.1"/>
+    <trigger class="time" time_to_live="0.2"/>
 
     <rotation class="random" />
 

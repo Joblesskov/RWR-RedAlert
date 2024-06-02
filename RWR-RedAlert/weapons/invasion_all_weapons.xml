@@ -14,9 +14,11 @@ Common
     <weapon file="tow_resource.weapon" />
     <weapon file="dog.weapon" />
     <weapon file="dog_heal.weapon" />
-    <weapon file="pb.weapon" />
 	<weapon file="bandage.weapon" />
 	<weapon file="vest_repair.weapon" />
+	<weapon file="wrench.weapon"  />
+	<weapon file="wrench_small.weapon" />
+	<weapon file="tracer_dart.weapon" />
 Vehicle
     <weapon file="apc_hmg.weapon" />
     <weapon file="apc_hmg_1.weapon" />
@@ -41,6 +43,7 @@ Allies
     <weapon file="wa_awp_e.weapon" />
     <weapon file="wa_chrono.weapon" />
     <weapon file="wa_chrono_e.weapon" />
+    <weapon file="wa_colt_m1911.weapon" />
     <weapon file="wa_javelin.weapon" />
     <weapon file="wa_m60.weapon" />
     <weapon file="wa_m60_e.weapon" />
@@ -64,11 +67,19 @@ Soviet Union
     <weapon file="ws_flakt_e.weapon" />
     <weapon file="ws_knife.weapon" />
     <weapon file="ws_knife_e.weapon" />
-    <weapon file="ws_mind_control.weapon" />
-    <weapon file="ws_mind_control_e.weapon" />
     <weapon file="ws_ppsh41.weapon" />
     <weapon file="ws_ppsh41_e.weapon" />
     <weapon file="ws_rpg-7.weapon" />
     <weapon file="ws_teslat.weapon" />
     <weapon file="ws_teslat_e.weapon" />
+Epsilon Army
+    <weapon file="wy_fist.weapon" />
+    <weapon file="wy_fist_e.weapon" />
+    <weapon file="wy_mind_control.weapon" />
+    <weapon file="wy_mind_control_e.weapon" />
+    <weapon file="wy_psychic_jab.weapon" />
+    <weapon file="wy_psychic_jab_e.weapon" />
+    <weapon file="wy_steyr_tmp.weapon" />
+    <weapon file="wy_virus.weapon" />
+    <weapon file="wy_virus_e.weapon" />
 </weapons>
