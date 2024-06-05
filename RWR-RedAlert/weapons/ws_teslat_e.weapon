@@ -10,7 +10,7 @@
         projectiles_per_shot="3" />
     <ballistics curve_height="5.0" near_far_distance="0.0" speed_estimation_near="1000.0" speed_estimation_far="1000.0" max_speed="80.0" randomness="0.0" tweak_factor="4.2" /> 
     <commonness value="3" can_respawn_with="0" in_stock="1"/>    
-    <inventory price="400.0" />
+    <inventory price="350.0" />
     <capacity value="0" source="rank" source_value="0.5"/>
     <capacity value="1" source="rank" source_value="1.5"/>
 	<hud_icon filename="hud_teslat_e.png" />

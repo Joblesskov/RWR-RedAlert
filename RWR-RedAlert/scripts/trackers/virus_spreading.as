@@ -20,7 +20,7 @@ class VirusSpreading : Tracker {
         string killKey = event.getStringAttribute("key");
 		string targetGroup = target.getStringAttribute("soldier_group_name");
 		
-		bool checkKey = killKey == "wy_virus.weapon" || killKey == "wy_virus_e.weapon" || killKey =="virus_smoke_sub.projectile";
+		bool checkKey = killKey == "wy_virus.weapon" || killKey == "wy_virus_e.weapon" || killKey =="virus_cloud_sub.projectile";
 		bool checkGroup = targetGroup != "virus";
 		if (killer !is null && target !is null && checkKey && checkGroup) {
 			
@@ -30,7 +30,7 @@ class VirusSpreading : Tracker {
 				"faction_id='" + killer.getIntAttribute("faction_id") + "' "+
 				"position='" + target.getStringAttribute("position") + "' "+
 				"instance_class='grenade' "+
-				"instance_key='virus_smoke.projectile' "+
+				"instance_key='virus_cloud.projectile' "+
                 "character_id='" + killer.getIntAttribute("id") + "' "+
 				"/>";
             
@@ -40,7 +40,7 @@ class VirusSpreading : Tracker {
 				"faction_id='" + killer.getIntAttribute("faction_id") + "' "+
 				"position='" + target.getStringAttribute("position") + "' "+
 				"instance_class='grenade' "+
-				"instance_key='virus_smoke_sub.projectile' "+
+				"instance_key='virus_cloud_sub.projectile' "+
                 "character_id='" + killer.getIntAttribute("id") + "' "+
 				"/>";
 

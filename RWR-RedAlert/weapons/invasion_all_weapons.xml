@@ -38,7 +38,7 @@ Vehicle
     <weapon file="tank_mg_1.weapon" />
     <weapon file="tank_mg_2.weapon" />
     <weapon file="tow.weapon" />
-Allies
+Allied Forces
     <weapon file="wa_awp.weapon" />
     <weapon file="wa_awp_e.weapon" />
     <weapon file="wa_chrono.weapon" />
@@ -72,7 +72,7 @@ Soviet Union
     <weapon file="ws_rpg-7.weapon" />
     <weapon file="ws_teslat.weapon" />
     <weapon file="ws_teslat_e.weapon" />
-Epsilon Army
+Yuri's Army
     <weapon file="wy_fist.weapon" />
     <weapon file="wy_fist_e.weapon" />
     <weapon file="wy_mind_control.weapon" />
@@ -82,4 +82,5 @@ Epsilon Army
     <weapon file="wy_steyr_tmp.weapon" />
     <weapon file="wy_virus.weapon" />
     <weapon file="wy_virus_e.weapon" />
+    <weapon file="wy_yuri.weapon" />
 </weapons>

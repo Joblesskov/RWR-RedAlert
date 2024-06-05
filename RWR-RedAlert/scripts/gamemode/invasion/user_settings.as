@@ -12,7 +12,7 @@ class UserSettings {
 	// comes in from game menu, or, defaults are used
 	// --------------------------------------------
 	string m_savegame = ""; // map rotator needs to feed this back to game
-	string m_username = "SINGLE PLAYER";
+	string m_username = "Admin";
 
 	float m_fellowCapacityFactor = 1.05;
 	float m_fellowAiAccuracyFactor = 0.94;
@@ -51,10 +51,21 @@ class UserSettings {
 
 	// dedicated servers only
 	bool m_teamKillPenaltyEnabled = true;
-	int m_teamKillsToStartPenalty = 5;
-	float m_teamKillPenaltyTime = 1800.0;
+	int m_teamKillsToStartPenalty = 3;
+	float m_teamKillPenaltyTime = 600.0;
 	float m_forgiveTeamKillTime = 900.0;
 	float m_spawnTimeAtMaxPlayers = 1.0;  // was 2.0 (1.82)
+
+	int m_server_difficulty_level = 0;	//max 15
+	bool m_debug_mode = false;
+	bool m_server_test_mode = false;
+	bool m_server_activity = false;
+	bool m_server_activity_racing = false;
+	bool m_single_player = false;
+	bool m_top_down = false;
+	string m_GameMode = "";
+
+	float m_server_added_bonus_factor = 0.0;
 
 	array<string> m_overlayPaths;
 
@@ -128,13 +139,39 @@ class UserSettings {
 				m_fov = false;
 			}
 			
-			if (m_presetId == "test") {
+			if (m_presetId == "headstart") {
+				m_initialXp = 0.3;
+				m_initialRp = 500;
+			}
+
+			if(m_presetId == "normal") {
+				m_initialXp = 0;
+				m_initialRp = 5000;
+			}
+
+			if(m_presetId == "test") {
 				m_initialXp = 100;
 				m_initialRp = 1000000;
 			}
-			if (m_presetId == "normal") {
-				m_initialXp = 0.01;
-				m_initialRp = 1000000;
+
+			if(settings.hasAttribute("server_difficulty_level")){
+				m_server_difficulty_level = settings.getIntAttribute("server_difficulty_level");
+			}
+
+			if(settings.hasAttribute("debug_mode")){
+				m_debug_mode = settings.getBoolAttribute("debug_mode");
+			}
+			if(settings.hasAttribute("server_test_mode")){
+				m_server_test_mode = settings.getBoolAttribute("server_test_mode");
+			}
+			if(settings.hasAttribute("server_activity_racing")){
+				m_server_activity_racing = settings.getBoolAttribute("server_activity_racing");
+			}
+			if(settings.hasAttribute("single_player")){
+				m_single_player = settings.getBoolAttribute("single_player");
+			}
+			if(settings.hasAttribute("GameMode")){
+				m_GameMode = settings.getStringAttribute("GameMode");
 			}
 		}
 	}
@@ -166,6 +203,15 @@ class UserSettings {
 		settings.setFloatAttribute("player_damage_modifier", m_playerDamageModifier);
 
 		settings.setIntAttribute("continue_as_new_campaign", m_continueAsNewCampaign ? 1 : 0);
+
+		settings.setIntAttribute("server_difficulty_level", m_server_difficulty_level);
+		settings.setBoolAttribute("debug_mode", m_debug_mode);
+		settings.setBoolAttribute("server_test_mode", m_server_test_mode);
+		settings.setBoolAttribute("server_activity_racing", m_server_activity_racing);
+		settings.setBoolAttribute("server_activity", m_server_activity);
+		settings.setBoolAttribute("single_player", m_single_player);
+
+		settings.setStringAttribute("GameMode", m_GameMode);
 
 		return settings;
 	}

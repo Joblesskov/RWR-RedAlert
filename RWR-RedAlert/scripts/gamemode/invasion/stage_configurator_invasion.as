@@ -37,9 +37,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 	const array<FactionConfig@>@ getAvailableFactionConfigs() const {
 		array<FactionConfig@> availableFactionConfigs;
 
-		availableFactionConfigs.push_back(FactionConfig(-1, "green.xml", "Allies", "0.1 0.5 0", "green.xml"));
-		availableFactionConfigs.push_back(FactionConfig(-1, "brown.xml", "Soviet Union", "0.5 0.25 0", "brown.xml"));
-		availableFactionConfigs.push_back(FactionConfig(-1, "grey.xml", "Epsilon", "0.5 0.5 0.5", "grey.xml"));
+		availableFactionConfigs.push_back(FactionConfig(-1, "green.xml", "Greenbelts", "0.1 0.5 0", "green.xml"));
+		availableFactionConfigs.push_back(FactionConfig(-1, "brown.xml", "Greenbelts", "0.1 0.5 0", "brown.xml"));
+		availableFactionConfigs.push_back(FactionConfig(-1, "brown.xml", "Brownpants", "0.5 0.25 0", "brown.xml"));
 
 		return availableFactionConfigs;
 	}
@@ -206,23 +206,20 @@ class StageConfiguratorInvasion : StageConfigurator {
     addStage(setupStage4());          // map7 #4
 	addStage(setupStage15());         // map1_2 #5
     addStage(setupStage12());         // map14 #6
-	addStage(setupStage21());         // map20 #7
-    addStage(setupStage10());         // map10 #8
-    addStage(setupStage17());         // map17  #9  
-    addStage(setupStage18());         // map13_2 #10
-    addStage(setupStage3());          // map3 #11
-    addStage(setupStage13());         // map16  #12  
-	addStage(setupFinalStage1());     // map11 #13
-    addStage(setupStage8());          // map8 #14
- 	addStage(setupStage14());         // map6_2 #15
-    addStage(setupStage2());          // map4 #16
-	addStage(setupStage20());         // map19 #17	
-    addStage(setupStage5());          // map1 #18
-    addStage(setupStage6());          // map5 #19
-	addStage(setupFinalStage2());     // map12 #20
-	addStage(setupStage19());         // map18 #21
-    addStage(setupStage11());         // map13 #22
-	addStage(setupStage22());         // map21 #23
+    addStage(setupStage10());         // map10 #7
+    addStage(setupStage17());         // map17  #8  
+    addStage(setupStage18());         // map13_2 #9
+    addStage(setupStage3());          // map3 #10
+    addStage(setupStage13());         // map16  #11  
+	addStage(setupFinalStage1());     // map11 #12
+    addStage(setupStage8());          // map8 #13
+ 	addStage(setupStage14());         // map6_2 #14
+    addStage(setupStage2());          // map4 #15
+    addStage(setupStage5());          // map1 #16
+    addStage(setupStage6());          // map5 #17
+	addStage(setupFinalStage2());     // map12 #18
+	addStage(setupStage19());         // map18 #19
+    addStage(setupStage11());         // map13 #20
 	}
 
 	// --------------------------------------------
@@ -1307,21 +1304,7 @@ class StageConfiguratorInvasion : StageConfigurator {
     stage.m_playerAiReduction = 2;                                              
     stage.m_soldierCapacityModel = "constant";       
 
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,465), 40, "default")); //center
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,485), 2, "bomber")); //center
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,445), 2, "bomber")); //center
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(438,0,344), 5, "default")); //NW
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(619,0,419), 5, "default")); //NE
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(461,0,540), 5, "default")); //SW
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(588,0,374), 5, "default")); //SE
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(428,0,344), 2, "bomber")); //NW
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(448,0,344), 2, "bomber")); //NW
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(609,0,419), 2, "bomber")); //NE
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(629,0,419), 2, "bomber")); //NE
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(451,0,540), 2, "bomber")); //SW
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(471,0,540), 2, "bomber")); //SW
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(578,0,374), 2, "bomber")); //SE
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(598,0,374), 2, "bomber")); //SE
+	stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,465), 50, "default"));
 	
     
     stage.m_minRandomCrates = 0; 
@@ -1440,7 +1423,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{ 				
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.1));   // was 0.3 0.1  
 			f.m_overCapacity = 0;
-			f.m_capacityOffset = 20;      // was 15 (1.95)                                       
+			f.m_capacityOffset = 15;      // was 0 (1.91)                                       
 			f.m_capacityMultiplier = 1;                                               
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
@@ -1477,205 +1460,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		setDefaultAttackBreakTimes(stage);
 		return stage;
 	}  
-
-	// ------------------------------------------------------------------------------------------------
-
-	protected Stage@ setupStage20() {
-		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Swan River";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map19";
-		stage.m_mapInfo.m_id = "map19";
-		
-		stage.m_includeLayers.insertLast("layer1.invasion");		
-
-    stage.m_fogOffset = 24.0;    
-    stage.m_fogRange = 50.0; 
-
-		stage.m_maxSoldiers = 19 * 15;
-		stage.m_playerAiCompensation = 4;                                       
-        stage.m_playerAiReduction = 2.0;                                            
-  
-		stage.m_soldierCapacityVariance = 0.6;   
-
-		stage.addTracker(PeacefulLastBase(m_metagame, 0));    
-		stage.addTracker(CommsCapacityHandler(m_metagame));
-
-    stage.m_minRandomCrates = 1; 
-    stage.m_maxRandomCrates = 4;  
-
-		{ 				
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.46, 0.1));   // was 0.5 0.1 (1.96)
-			f.m_overCapacity = 0;
-			f.m_capacityOffset = 15;     // was 10 (1.95)                                        
-			f.m_capacityMultiplier = 1;                                               
-			f.m_bases = 1;
-			stage.m_factions.insertLast(f);
-		}
-		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.62, 0.15));  // was 0.60 0.15  (1.96)
-			f.m_overCapacity = 120;                                          
-			f.m_capacityOffset = 10;      // was 0
-			stage.m_factions.insertLast(f);
-		}
-
-		// metadata
-		stage.m_primaryObjective = "capture";
-		stage.m_radioObjectivePresent = false;
-
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle", "radio_jammer2.vehicle", "radar_tower.vehicle", "legion.vehicle", "apc.vehicle", "apc_1.vehicles", "apc_2.vehicle", "flamer_tank.vehicle", "missile_launcher.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-
-
-		setDefaultAttackBreakTimes(stage);
-		return stage;
-	} 
-	
-	// ------------------------------------------------------------------------------------------------
-
-	protected Stage@ setupStage21() {
-		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Elk Island";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map20";
-		stage.m_mapInfo.m_id = "map20";
-		
-		stage.m_includeLayers.insertLast("layer1.invasion");		
-
-
-		stage.m_maxSoldiers = 12 * 17;     // 194 units
-		stage.m_playerAiCompensation = 4;                                       
-        stage.m_playerAiReduction = 2.0;                                            
-  
-		stage.m_soldierCapacityVariance = 0.6;    
-
-		stage.addTracker(PeacefulLastBase(m_metagame, 0));    
-		stage.addTracker(CommsCapacityHandler(m_metagame));
-
-    stage.m_minRandomCrates = 1; 
-    stage.m_maxRandomCrates = 3;  
-
-		{ 				
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.1));   
-			f.m_overCapacity = 5;  
-			f.m_capacityOffset = 0;                                           
-			f.m_capacityMultiplier = 1;                                               
-			f.m_bases = 1;
-			stage.m_factions.insertLast(f);
-		}
-		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.54, 0.15));    
-			f.m_overCapacity = 80;                                          
-			f.m_capacityOffset = 0;   // was 5
-			stage.m_factions.insertLast(f);
-		}
-
-		// metadata
-		stage.m_primaryObjective = "capture";
-		stage.m_radioObjectivePresent = false;
-
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle", "radio_jammer2.vehicle", "radar_tower.vehicle", "legion.vehicle", "lai-109.vehicle", "wiesel_tow.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-
-
-		setDefaultAttackBreakTimes(stage);
-		return stage;
-	} 
-	
-	// ------------------------------------------------------------------------------------------------
-
-	protected Stage@ setupStage22() {
-		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Road 666";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map21";
-		stage.m_mapInfo.m_id = "map21";
-		stage.m_mapInfo.m_size = 1536.0;
-		
-		stage.m_includeLayers.insertLast("layer1.invasion");		
-
-    stage.m_fogOffset = 24.0;    
-    stage.m_fogRange = 50.0; 
-
-		stage.m_maxSoldiers = 17 * 15;  // 16*15
-		stage.m_playerAiCompensation = 4;                                       
-        stage.m_playerAiReduction = 2.0;                                            
-  
-		stage.m_soldierCapacityVariance = 0.6;   
-
-		stage.addTracker(PeacefulLastBase(m_metagame, 0));    
-		stage.addTracker(CommsCapacityHandler(m_metagame));
-
-    stage.m_minRandomCrates = 1; 
-    stage.m_maxRandomCrates = 4;  
-
-		{ 				
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.40, 0.1));   // 0.42 0.1
-			f.m_overCapacity = 0;
-			f.m_capacityOffset = 15;                                             
-			f.m_capacityMultiplier = 1;                                               
-			f.m_bases = 1;
-			stage.m_factions.insertLast(f);
-		}
-		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.65, 0.15));  // 0.62 0.15
-			f.m_overCapacity = 120;                                          
-			f.m_capacityOffset = 10;      // was 0
-			stage.m_factions.insertLast(f);
-		}
-
-		// metadata
-		stage.m_primaryObjective = "capture";
-		stage.m_radioObjectivePresent = false;
-
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-			addFactionResourceElements(command, "vehicle", array<string> = {"lailv-002.vehicle", "mmls-528.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer2.vehicle", "radar_tower.vehicle", "legion.vehicle", "tank.vehicle", "tank_1.vehicles", "tank_2.vehicle", "flamer_tank.vehicle", "missile_launcher.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-
-
-		setDefaultAttackBreakTimes(stage);
-		return stage;
-	} 	
-	
+ 
 
 	// ------------------------------------------------------------------------------------------------
 	// ------------------------------------------------------------------------------------------------

@@ -414,7 +414,4 @@
 	<soldier name="prisoner" spawn_score="0" copy_from="conscript">
 
 	</soldier>
-
-	Mind Control Groups
-
 </faction>

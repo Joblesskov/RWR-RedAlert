@@ -43,7 +43,7 @@
     <animation state_key="stabbing" animation_key="pistol whip 2" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
 	
-    <sound key="fire" fileref="irocatta.wav" pitch_variety="0.05"/>
+    <sound key="fire" fileref="irocatta.wav" pitch_variety="0.05" volume="0.8" />
     <sound key="magazine_out" fileref="pistol_clip_out.wav" />
     <sound key="magazine_in" fileref="pistol_clip_in.wav" volume="0.5" />    
     <sound key="cycle" fileref="pistol_chamber.wav" volume="0.5" />

@@ -13,7 +13,7 @@
   name="Mind Control" 
   class="2" 
   projectile_speed="120.0" 
-  barrel_offset_3d="0 1 0" 
+  barrel_offset_3d="0 1 -0.1" 
   sight_range_modifier="1.2"
   spread_range="0"/>
 
@@ -30,7 +30,10 @@
 
     <model filename="" />
 
-    <projectile file="alpha_wave.projectile" />
+    <projectile file="alpha_wave.projectile">
+      <effect class="result" key="terrain" ref="AlphaWaveWoosh1" />
+      <effect class="result" key="other" copy="terrain" /> 
+    </projectile>
 
     <hud_icon filename="hud_psicorp.png" />
     <commonness value="1" can_respawn_with="1" in_stock="1" />
@@ -40,7 +43,4 @@
 
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
-    
-    <modifier class="speed" value="-0.0" />    
-
 </weapon>

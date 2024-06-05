@@ -11,11 +11,6 @@ class MyVehicleDeliveryConfigurator : VehicleDeliveryConfiguratorInvasion {
 	protected array<Resource@>@ getUnlockItemList() const {
 		array<Resource@> list;
 
-		// --------------------------------------------
-		// TODO:
-		// - replace these with suitable items for cargo truck delivery rewards
-		// --------------------------------------------
-         
 		return list;
 	}
 }

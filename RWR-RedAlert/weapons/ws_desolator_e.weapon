@@ -7,7 +7,7 @@
 	can_shoot_standing="1" 
 	suppressed="1" 
 	name="Rad Cannon (Elite)"
-    projectiles_per_shot="2" 
+    projectiles_per_shot="1" 
 	sight_range_modifier="1.35" />
     <commonness value="3" can_respawn_with="0" in_stock="1"/>    
     <inventory price="300.0" />

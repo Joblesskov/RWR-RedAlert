@@ -84,4 +84,32 @@
 	<model filename="soldier_a_boris.xml">
 		<requirement class="weapon" slot="0" key="ws_akm.weapon"/>
 	</model>
+
+	<model filename="soldier_a_initiate.xml">
+		<requirement class="weapon" slot="0" key="wy_psychic_jab.weapon"/>
+	</model>
+	<model filename="soldier_a_initiate.xml">
+		<requirement class="weapon" slot="0" key="wy_psychic_jab_e.weapon"/>
+	</model>
+	<model filename="soldier_a_brute.xml">
+		<requirement class="weapon" slot="0" key="wy_fist.weapon"/>
+	</model>
+	<model filename="soldier_a_brute.xml">
+		<requirement class="weapon" slot="0" key="wy_fist_e.weapon"/>
+	</model>
+	<model filename="soldier_a_virus.xml">
+		<requirement class="weapon" slot="0" key="wy_virus.weapon"/>
+	</model>
+	<model filename="soldier_a_virus.xml">
+		<requirement class="weapon" slot="0" key="wy_virus_e.weapon"/>
+	</model>
+	<model filename="soldier_a_psicorp.xml">
+		<requirement class="weapon" slot="0" key="wy_mind_control.weapon"/>
+	</model>
+	<model filename="soldier_a_psicorp.xml">
+		<requirement class="weapon" slot="0" key="wy_mind_control_e.weapon"/>
+	</model>
+	<model filename="soldier_a_yuri.xml">
+		<requirement class="weapon" slot="0" key="wy_yuri.weapon"/>
+	</model>
 </models>

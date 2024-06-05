@@ -12,7 +12,7 @@
         sight_range_modifier="1.5"
         sustained_fire_grow_step="1.0" 
         sustained_fire_diminish_rate="1.0"
-        magazine_size="2" 
+        magazine_size="4" 
         burst_shots="1" 
         projectiles_per_shot="1" 
         reload_one_at_a_time="0"

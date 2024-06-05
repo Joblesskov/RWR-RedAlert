@@ -30,7 +30,7 @@
 			player_damage_modifier="0.0"
 		/>
 
-		<preset text="Let's play" help="" id="normal"
+		<preset text="Difficulty:Normal" help="Help:Hard" id="normal"
 			friendly_capacity="3.0"
 			friendly_accuracy="1.00"
 			enemy_capacity="2.5"

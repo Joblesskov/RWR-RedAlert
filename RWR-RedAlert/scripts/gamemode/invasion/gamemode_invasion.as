@@ -29,19 +29,10 @@
 #include "call_marker_tracker.as"
 #include "idler_kicker.as"
 #include "supporter_command_handler.as"
-#include "antifarm.as"
 
-// community trackers
-#include "gps_laptop.as"
-#include "emp_grenade.as"
-#include "repair_crane.as"
-#include "a10_gun_run.as"
-#include "gunship_run.as"
-#include "squad_equipment_kit.as"
-#include "rangefinder.as"
-#include "halloween.as"  // Halloween event only (since Halloween 2022 enabled permanently)
-#include "sbl.as"
-#include "emoticons.as"
+// 测试脚本
+#include "testMode.as"
+#include "INFO.as"
 #include "mind_control.as"
 #include "virus_spreading.as"
 
@@ -59,7 +50,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	
 	protected array<Faction@> m_factions;
 
-	// TODO: can we avoid this?
 	string m_gameMapPath = "";
 
 	protected UserSettings@ m_userSettings;
@@ -255,11 +245,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			addTracker(m_specialCargoVehicleManager);
 			m_specialCargoVehicleManager.applyAvailability();
 		}
-
-		setupMinibosses();
-		setupDogs();
-		setupRipper();
-		setupGrinch();
 	}
 
 	// --------------------------------------------
@@ -311,13 +296,13 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		if (m_testingToolsTracker !is null) {
 			addTracker(m_testingToolsTracker);
 		}
+		
 		addTracker(MindControl(this));
 		addTracker(VirusSpreading(this));
-		addTracker(PrisonBreakObjective(this, 0));
+		//addTracker(PrisonBreakObjective(this, 0));
 		setupDisableRadioAtMatchOver();
 		addTracker(AutoSaver(this));
 		addTracker(BasicCommandHandler(this));
-        	addTracker(SBLTracker(this));
 		
 		setupExperimentalFeatures();
 		setupIcecreamReport();
@@ -326,146 +311,17 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		
 		setupSpawnTimeHandler();
 		setupSideBaseAttackHandler();
-		setupIdlerKicker();
+		//setupIdlerKicker();
 
-		addTracker(SupporterCommandHandler(this));
+		//addTracker(SupporterCommandHandler(this));
 	}
 
 	// --------------------------------------------
 	protected void setupExperimentalFeatures() {
-		addTracker(GpsLaptop(this));
-		addTracker(EmpGrenade(this));
-		addTracker(RepairCrane(this));
-		addTracker(A10GunRun(this));
-		addTracker(AC130GunRun(this));        
-		addTracker(SquadEquipmentKit(this)); 
-		addTracker(RangeFinder(this)); 
-		addTracker(AntiFarm(this));
-		addTracker(Halloween(this));    // Halloween event only
-		addTracker(Emoticons(this));
+		addTracker(testMode(this));
+		addTracker(Initiate(this));
 	}
 
-	// --------------------------------------------
-	protected void setupMinibosses() {
-		{
-			// disable minibosses in friendly faction 
-			// to prevent harvesting rares from minibosses
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", 0);
-			command.setStringAttribute("soldier_group_name", "miniboss");
-			command.setFloatAttribute("spawn_score", 0.0f);
-			getComms().send(command);
-
-			command.setStringAttribute("soldier_group_name", "miniboss_female");
-			getComms().send(command);
-		}
-
-		for (uint i = 1; i < m_factions.size(); ++i) {
-			const FactionConfig@ config = m_factions[i].m_config;
-			// increase minibosses in enemy factions slightly
-			// 0.005 -> 0.007 (0.004 male, 0.003 female)
-      // 0.007 -> 0.009 (0.006 male, 0.003 female)   (1.65)
-			bool femaleExists = true;
-			if (config.m_file == "brown.xml") {
-				femaleExists = false;
-			}
-
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", i);
-			command.setStringAttribute("soldier_group_name", "miniboss");
-			command.setFloatAttribute("spawn_score", femaleExists ? 0.006f : 0.009f);
-			getComms().send(command);
-
-			if (femaleExists) {
-				command.setStringAttribute("soldier_group_name", "miniboss_female");
-				command.setFloatAttribute("spawn_score", 0.003f);
-				getComms().send(command);
-			}
-		}
-	}
-
-	// --------------------------------------------
-	protected void setupDogs() {
-		{
-			// enable dogs in friendly faction only
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", 0);
-			command.setStringAttribute("soldier_group_name", "dog");
-			command.setFloatAttribute("spawn_score", 0.008f);
-			getComms().send(command);
-        }
-
-		for (uint i = 1; i < m_factions.size(); ++i) {
-			const FactionConfig@ config = m_factions[i].m_config;
-		{
-			// disable dogs in enemy factions 
-			// to prevent players to have to kill dogs
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", i);
-			command.setStringAttribute("soldier_group_name", "dog");
-			command.setFloatAttribute("spawn_score", 0.0f);
-			getComms().send(command);
-		}
-
-      }
-	}
-
-	protected void setupRipper() {
-		{
-			// disable rippers in friendly faction
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", 0);
-			command.setStringAttribute("soldier_group_name", "elite ripper");
-			command.setFloatAttribute("spawn_score", 0.0f);
-			getComms().send(command);
-        }
-
-		for (uint i = 1; i < m_factions.size(); ++i) {
-			const FactionConfig@ config = m_factions[i].m_config;
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", i);
-			command.setStringAttribute("soldier_group_name", "elite ripper");
-			command.setFloatAttribute("spawn_score", 0.0f);    // 0.008 during Halloween event
-			getComms().send(command);
-		}
-
-      }
-	}
-
-	protected void setupGrinch() {
-	    _log("Setting up grinch faction...");
-		{
-			// disable grinch in friendly faction
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", 0);
-			command.setStringAttribute("soldier_group_name", "grinch");
-			command.setFloatAttribute("spawn_score", 0.0f);
-			getComms().send(command);
-        }
-
-		for (uint i = 1; i < m_factions.size(); ++i) {
-			const FactionConfig@ config = m_factions[i].m_config;
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", i);
-			command.setStringAttribute("soldier_group_name", "grinch");
-			command.setFloatAttribute("spawn_score", 0.0f);    // 0.008 during xmas event, else 0.0
-			getComms().send(command);
-		}
-
-      }
-	}
-
-	// --------------------------------------------
 	protected void setupDisableRadioAtMatchOver() {
 		addTracker(MatchOverRadioDisabler(this));
 	}
@@ -503,29 +359,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		// if you're adding a call here, make sure it has notify_metagame="1" in it's <call> tag
 		array<CallMarkerConfig@> configs = {
 			//CallMarkerConfig(string key, int atlasIndex = 0, float size = 2.0, float range = 1.0, string text = "")
-			CallMarkerConfig("mortar1.call", "call_marker", 6, 0.5, 30.0),
-//			CallMarkerConfig("mortar2.call", "call_marker", 7, 0.5, 50.0),            // remplaced in 1.77 with cluster bomb
-            CallMarkerConfig("cluster_bomb.call", "call_marker", 7, 0.5, 35.0),
-			CallMarkerConfig("artillery1.call", "call_marker", 8, 1.0, 65.0),   // was 90 size before 1.83
-			CallMarkerConfig("artillery2.call", "call_marker", 9, 1.0, 82.0),   // was 90 size before 1.83
-			CallMarkerConfig("paratroopers1.call", "call_marker_drop", 10, 0.5),
-			CallMarkerConfig("paratroopers2.call", "call_marker_drop", 11, 0.5),
-			CallMarkerConfig("paratroopers_medic.call", "call_marker_drop", 14, 0.5),            
-			CallMarkerConfig("humvee.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("humvee_alt.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("vfs_alt.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("buggy.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("buggy_alt.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("supply_quad.call", "call_marker_drop", 13, 0.5),
-			CallMarkerConfig("supply_quad_alt.call", "call_marker_drop", 13, 0.5),
-			CallMarkerConfig("tank.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("tank_alt.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("cover_drop.call", "call_marker_drop", 13, 0.5),
-            //CallMarkerConfig("a10_gun_run.call", "call_marker", 4, 0.5) //handled in a10_gun_run.as
-            CallMarkerConfig("gunship_run.call", "call_marker", 4, 0.5, 58),
-			CallMarkerConfig("gunship_run2.call", "call_marker", 4, 0.5, 58),
-			CallMarkerConfig("rubber_boat.call", "call_marker_drop", 12, 0.5),
-			CallMarkerConfig("rubber_boat_alt.call", "call_marker_drop", 12, 0.5)
+			CallMarkerConfig("mortar1.call", "call_marker", 6, 0.5, 30.0)
 			};
 
 		addTracker(CallMarkerTracker(this, configs));

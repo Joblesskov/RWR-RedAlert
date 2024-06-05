@@ -20,19 +20,23 @@
   	stab_enabled="0"
     stab_range="2"/>
 
-    <animation state_key="recoil" 		animation_key="zweihander slash 1" />
-    <animation state_key="recoil" 		animation_key="zweihander slash 2" />
-    <animation state_key="recoil" 		animation_key="zweihander slash 3" />
-    <animation state_key="hold" 		animation_key="still, heavy weapon" />
-    <animation state_key="hold_on_wall" 	animation_key="still, heavy weapon" />
-    <animation state_key="hold_casual" 		animation_key="zweihander still" />
-    <animation state_key="still_against_wall" 	animation_key="still, heavy weapon" />
-    <animation state_key="crouching" 		animation_key="crouch, still, large wrench" />
-    <animation state_key="walking" 		animation_key="walking, heavy weapon" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon" />
-    <animation state_key="crouch_moving" 	animation_key="crouching forwards, large wrench" />
-    <animation state_key="stabbing" 		animation_key="zweihander stab" />
-
+	<animation state_key="recoil"			animation_key="stabbing, fast" />
+	<animation state_key="cycle"			animation_key="recoil, knife" />
+	<animation state_key="hold"			animation_key="hold, knife" />
+	<animation state_key="hold_casual"		animation_key="hold, saber" />
+	<animation state_key="hold_on_wall"		animation_key="hold, knife" />
+	<animation state_key="still_against_wall"	animation_key="hold, saber" />
+	<animation state_key="crouching"	animation_key="crouch, knife" />
+	<animation state_key="crouch_moving"	animation_key="crouching forwards, ninjato" />
+	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, ninjato" />
+	<animation state_key="running"			animation_key="running, pistol" />
+	<animation state_key="walking"			animation_key="walking, single hand carry" />
+	<animation state_key="changing_weapon_in"	animation_key="change weapon in, ninjato" />
+	<animation state_key="changing_weapon_out"	animation_key="change weapon out, ninjato" />
+    <animation state_key="prone_still" 		animation_key="prone still, sword" />
+    <animation state_key="prone_moving" 		animation_key="prone moving, ninjato" />
+	<animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
+	<animation state_key="stabbing"			animation_key="stabbing, fast" />
 
     <sound key="effect" fileref="ibruatta.wav" pitch_variety="0.05" />
     <sound key="effect" fileref="ibruattb.wav" pitch_variety="0.05" />
@@ -40,6 +44,7 @@
     <sound key="effect" fileref="ibruattd.wav" pitch_variety="0.05" />
     <sound key="effect" fileref="ibruatte.wav" pitch_variety="0.05" />
     <sound key="effect" fileref="ibruattf.wav" pitch_variety="0.05" />
+	<sound key="stab_hit" fileref="igenexpa.wav" pitch_variety="0.05" />
 
     <effect class="stab" key="character" ref="BloodSplat50Cal" lighting="1" />
     <effect class="stab" key="character" ref="BurstShine50Cal" lighting="1" post_processing="0" />
@@ -47,7 +52,7 @@
     <effect class="stab" key="shield" ref="ShieldBurst" />
     <effect class="stab" key="vehicle" ref="Burst" use_surface_color="1" />
 
-	<model filename="zweihander.xml" />
+	<model />
 	<hud_icon filename="hud_brute.png" />
 
     <weak_hand_hold offset="1" />

@@ -18,7 +18,7 @@
     <animation state_key="reload" animation_key="reloading, p90" />
 	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />	
 	
-    <sound key="fire" fileref="iseaatta.wav" pitch_variety="0.05"/>
+    <sound key="fire" fileref="iseaatta.wav" pitch_variety="0.05" volume="0.6" />
     <sound key="magazine_out" fileref="rifle_clip_out.wav" />
     <sound key="magazine_in" fileref="rifle_clip_in.wav" />
     <sound key="cycle" fileref="rifle_chamber.wav" />

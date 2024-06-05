@@ -23,7 +23,7 @@
    <!--    <animation key="hold_on_wall" ref="1" />  -->
    <!-- <animation key="walking" ref="31" /> -->
 
-    <sound key="fire" fileref="igiat1c.wav" pitch_variety="0.04"/>
+    <sound key="fire" fileref="igiat1c.wav" pitch_variety="0.04" volume="0.6" />
     <sound key="magazine_out" fileref="mg_clip_out.wav" />
     <sound key="magazine_in" fileref="mg_clip_in.wav" />
     <sound key="cycle" fileref="rifle_chamber.wav" />

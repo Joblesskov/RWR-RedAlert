@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <faction 
-	name="Allies" 
+	name="Allied Forces" 
 	color="0.0 0.6 1.0" 
 	firstnames_file="english_firstnames.txt" 
 	lastnames_file="english_lastnames.txt" 
@@ -481,7 +481,4 @@
 	<soldier name="prisoner" spawn_score="0" copy_from="gi">
 
 	</soldier>
-
-	Mind Control Groups
-
 </faction>

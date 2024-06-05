@@ -25,6 +25,6 @@ Projectile
     <projectile file="tracer_dart_blast.projectile" />
     <projectile file="tracer_missile.projectile" />
     <projectile file="virus_dart.projectile" />
-    <projectile file="virus_smoke.projectile" />
-    <projectile file="virus_smoke_sub.projectile" />
+    <projectile file="virus_cloud.projectile" />
+    <projectile file="virus_cloud_sub.projectile" />
 </projectiles>

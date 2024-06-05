@@ -26,6 +26,9 @@
 	<model filename="soldier_y_psicorp.xml">
 		<requirement class="weapon" slot="0" key="wy_mind_control_e.weapon"/>
 	</model>
+	<model filename="soldier_y_yuri.xml">
+		<requirement class="weapon" slot="0" key="wy_yuri.weapon"/>
+	</model>
 
 	<model filename="soldier_y_gi.xml">
 		<requirement class="weapon" slot="0" key="wa_ump40.weapon"/>
@@ -75,6 +78,7 @@
 	<model filename="soldier_y_tanya.xml">
 		<requirement class="weapon" slot="0" key="wa_colt_m1911.weapon"/>
 	</model>
+	
 	<model filename="soldier_y_conscript.xml">
         <requirement class="weapon" slot="0" key="ws_ppsh41.weapon"/>
     </model>

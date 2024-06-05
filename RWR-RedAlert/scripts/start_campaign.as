@@ -15,13 +15,17 @@ void main(dictionary@ inputData) {
 	_setupLog(inputSettings);
 	settings.print();
 
+	settings.m_server_test_mode = true;
+	settings.m_debug_mode = true;
+	settings.m_single_player = true;
+
 	// --------------------------------------------
 	// TODO: replace with your package's folder here
 	// --------------------------------------------
 	array<string> overlays = {
                 "media/packages/red_alert"
         };
-        settings.m_overlayPaths = overlays;
+	settings.m_overlayPaths = overlays;
 
 	MyGameMode metagame(settings);
 

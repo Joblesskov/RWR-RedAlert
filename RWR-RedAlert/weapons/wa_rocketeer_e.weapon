@@ -6,7 +6,7 @@
 	    name="Rocketeer (Elite)"
 	    projectile_speed="120.0"/>
     <commonness value="3" can_respawn_with="0" in_stock="1"/>    
-    <inventory price="400.0" />
+    <inventory price="360.0" />
     <capacity value="0" source="rank" source_value="1.0"/>
     <capacity value="1" source="rank" source_value="3.0"/>
     <hud_icon filename="hud_rocketeer_e.png" />

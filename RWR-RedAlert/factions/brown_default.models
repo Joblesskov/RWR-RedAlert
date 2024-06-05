@@ -84,4 +84,32 @@
 	<model filename="soldier_s_tanya.xml">
 		<requirement class="weapon" slot="0" key="wa_colt_m1911.weapon"/>
 	</model>
+	
+	<model filename="soldier_s_initiate.xml">
+		<requirement class="weapon" slot="0" key="wy_psychic_jab.weapon"/>
+	</model>
+	<model filename="soldier_s_initiate.xml">
+		<requirement class="weapon" slot="0" key="wy_psychic_jab_e.weapon"/>
+	</model>
+	<model filename="soldier_s_brute.xml">
+		<requirement class="weapon" slot="0" key="wy_fist.weapon"/>
+	</model>
+	<model filename="soldier_s_brute.xml">
+		<requirement class="weapon" slot="0" key="wy_fist_e.weapon"/>
+	</model>
+	<model filename="soldier_s_virus.xml">
+		<requirement class="weapon" slot="0" key="wy_virus.weapon"/>
+	</model>
+	<model filename="soldier_s_virus.xml">
+		<requirement class="weapon" slot="0" key="wy_virus_e.weapon"/>
+	</model>
+	<model filename="soldier_s_psicorp.xml">
+		<requirement class="weapon" slot="0" key="wy_mind_control.weapon"/>
+	</model>
+	<model filename="soldier_s_psicorp.xml">
+		<requirement class="weapon" slot="0" key="wy_mind_control_e.weapon"/>
+	</model>
+	<model filename="soldier_s_yuri.xml">
+		<requirement class="weapon" slot="0" key="wy_yuri.weapon"/>
+	</model>
 </models>

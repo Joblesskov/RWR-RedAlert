@@ -7,6 +7,6 @@
         kill_decay_start_time="0.55" 
         kill_decay_end_time="0.8" />
     <rotation class="motion" />
-    <model mesh_filename="dart.xml" />
+    <model mesh_filename="poison_dart.xml" />
     <trail probability="0" />
 </projectile>
